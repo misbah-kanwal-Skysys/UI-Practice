@@ -20,7 +20,7 @@ const Header = () => {
         <Box
           display={{ base: "none", xl: "flex" }}
           gap={{ lg: "40px", md: "20px", sm: "10px", base: "4px" }}
-          maxWidth={{ lg: "800px", xl: "850px" }}
+          maxWidth={{ lg: "600px", xl: "830px" }}
           justifyContent={"end"}
           w={"100%"}
         >

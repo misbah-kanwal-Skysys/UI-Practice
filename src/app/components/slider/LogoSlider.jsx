@@ -1,15 +1,16 @@
 "use client";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Image } from "@chakra-ui/react";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
 import ContainerLayout from "../layout/ContainerLayout";
 import { logos } from "@/app/db/dummy";
 
 const LogoSlider = () => {
   const settings = {
+    arrows: false,
+    centerMode: false,
     dots: false,
     lazyLoad: true,
     centerPadding: 0,
@@ -40,35 +41,26 @@ const LogoSlider = () => {
       },
     ],
   };
-
   return (
-    <ContainerLayout>
-      <Box py="20px" width="100%">
+      <Box width="100%" overflow="hidden">
         <Slider {...settings}>
           {logos.map((logo, index) => (
             <Box
+              justifyContent={"center"}
+              display={"flex"}
+              alignItems={"center"}
               key={index}
-              display="flex"
-              alignItems="center"
-              justifyContent="space-between"
             >
               <Image
                 src={logo}
                 alt={`Logo ${index + 1}`}
-                height={82}
-                width={125}
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  maxWidth: "105px",
-                  objectFit: "contain",
-                }}
+                maxW={["90px", "90px", "100px"]}
+                objectFit="contain"
               />
             </Box>
           ))}
         </Slider>
       </Box>
-    </ContainerLayout>
   );
 };
 

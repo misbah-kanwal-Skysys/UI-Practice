@@ -5,7 +5,7 @@ import {
   defineConfig,
 } from "@chakra-ui/react";
 import { buttonRecipe } from "./Recipe/buttonRecipe";
-import {textStyles} from "./Recipe/textRecipe"
+import { textStyles } from "./Recipe/textRecipe";
 
 const config = defineConfig({
   globalCss: {
@@ -29,6 +29,13 @@ const config = defineConfig({
         },
         black: {
           100: { value: "#000000" },
+          200:{value:"#191A23"}
+        },
+        gray:{
+          100:{value:"#F3F3F3"} 
+        },
+        green: {
+          100: { value: "#B9FF66" },
         },
       },
     },

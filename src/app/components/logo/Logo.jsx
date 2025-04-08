@@ -7,7 +7,7 @@ const Logo = () => {
     <Link href={'/'}>
       <Image
         cursor="pointer"
-        maxW={{ base: "140px", sm: "130px", md: "150px", lg: "180px" }}
+        maxW={{ base: "140px", sm: "130px", md: "150px", lg: "220px" }}
         src="/images/logo.svg"
         alt="logo"
       />

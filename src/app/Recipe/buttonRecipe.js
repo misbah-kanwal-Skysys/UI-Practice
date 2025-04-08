@@ -15,13 +15,13 @@ export const buttonRecipe = defineRecipe({
     },
     size: {
       xl: {
-        width: { lg: "180px", base: "150px" },
-        height: { lg: "52px", base: "50px" },
+        width: { lg: "215px", base: "150px" },
+        height: { lg: "59px", base: "50px" },
         fontSize: { base: "13px", sm: "15px", lg: "17px" },
       },
       xxl: {
-        width: { lg: "220px", base: "150px" },
-        height: { lg: "53px", base: "50px" },
+        width: { lg: "240px", base: "150px" },
+        height: { lg: "58px", base: "50px" },
         fontSize: { base: "13px", sm: "15px", lg: "16px" },
       },
     },
