@@ -1,13 +1,9 @@
 import React from "react";
 import ContentSection from "../contentSection/ContentSection";
 import { Box, Flex, Image, Link, Separator, Text } from "@chakra-ui/react";
+import { caseStudyArray } from "@/app/db/dummy";
 
 const CaseStudiesSection = () => {
-  const array = [
-    "For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.",
-    "For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.",
-    "For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales.",
-  ];
   return (
     <>
       <ContentSection
@@ -33,7 +29,7 @@ const CaseStudiesSection = () => {
           gap={{ base: 10, md: 0 }}
           position="relative"
         >
-          {array.map((text, i) => (
+          {caseStudyArray.map((text, i) => (
             <React.Fragment key={i}>
               <Box
                 w={["500px"]}
@@ -66,7 +62,7 @@ const CaseStudiesSection = () => {
                 </Flex>
               </Box>
 
-              {i < array.length - 1 && (
+              {i < caseStudyArray.length - 1 && (
                 <Box
                   display={{ base: "none", md: "block" }}
                   width="2px"

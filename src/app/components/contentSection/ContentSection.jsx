@@ -1,14 +1,9 @@
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 
-const ContentSection = ({
-  heading,
-  definition,
-  textwidth,
-}) => {
+const ContentSection = ({ heading, definition, textwidth }) => {
   return (
     <Flex
       w="100%"
-      alignItems="center"
       gap="38px"
       flexDirection={{ base: "column", md: "row" }}
     >
@@ -29,7 +24,9 @@ const ContentSection = ({
         </Heading>
       </Box>
       <Box maxW={textwidth}>
-        <Text textStyle={"p5"}>{definition}</Text>
+        <Text lineHeight={1.3} textStyle={"p5"}>
+          {definition}
+        </Text>
       </Box>
     </Flex>
   );

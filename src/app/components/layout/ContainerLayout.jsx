@@ -4,7 +4,7 @@ import React from "react";
 const ContainerLayout = ({ children }) => {
   return (
     <Container
-      px={{ base: "15px", md: "55px", lg: "80px" }}
+      px={{ base: "15px", md: "30px", lg: "80px" }}
       mx={"auto"}
       maxW={"1400px"}
     >

@@ -1,19 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import ContentSection from "../contentSection/ContentSection";
-import { Accordion, Box, Heading, Span, Text } from "@chakra-ui/react";
+import { Accordion, Box, Heading, Image, Span, Text } from "@chakra-ui/react";
+import { Separator } from "@chakra-ui/react";
+import { accordianArray } from "@/app/db/dummy";
 
 const OurWorkingSection = () => {
-  const array = [
-    {
-      ques: "Consultation",
-      ans: "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
-    },
-    {
-      ques: "Research and Strategy Development",
-      ans: "To join, you must verify that you are a current or former Navy Nuke by uploading your DD-214 and/or NSIPS Member Data Summary during registration. Once verified, you will gain access to employer profiles, job postings, career resources, and networking opportunities. This verification ensures that only qualified Navy Nukes are represented on the platform, maintaining the integrity and credibility of our network.",
-    },
-  ];
   return (
     <>
       <ContentSection
@@ -21,43 +13,80 @@ const OurWorkingSection = () => {
         definition={"Step-by-Step Guide to Achieving Your Business Goals"}
         textwidth={["380px"]}
       />
-      <Box bg={"red"}>
-        <Accordion.Root collapsible defaultValue={[0]}>
-          {array.map((item, index) => (
+      <Box mt={["60px"]}>
+        <Accordion.Root defaultValue={[0]} collapsible>
+          {accordianArray.map((item, index) => (
             <Accordion.Item
               border="1px solid #191A23"
               borderBottom="6px solid #191A23"
               bg="#F3F3F3"
-              my={4}
+              my={6}
               p={["30px"]}
-              borderRadius="33px"
+              borderRadius="28px"
               key={index}
-              value={item.value}
+              value={item}
+              _open={{
+                bg: "green.100",
+              }}
+              px={["40px"]}
             >
-              <Accordion.ItemTrigger>
-                <Box display="flex" alignItems="center" gap="8px">
-                  <Text fontWeight="bold" color="gray.500">
+              <Accordion.ItemTrigger
+                display={"flex"}
+                justifyContent={"space-between"}
+                w={"100%"}
+              >
+                <Box
+                  display="flex"
+                  alignItems="center"
+                  color="#000000"
+                  gap="15px"
+                >
+                  <Text
+                    textStyle={"p6"}
+                    fontFamily={"Space Grotesk"}
+                    fontWeight="600"
+                  >
                     {index + 1 < 10 ? `0${index + 1}` : index + 1}
                   </Text>
-                  <Span flex="1" textAlign="left">
+                  <Span
+                    fontWeight={700}
+                    textStyle={"p1"}
+                    flex="1"
+                    textAlign="left"
+                  >
                     {item.ques}
                   </Span>
                 </Box>
-                <Box
+                <Accordion.ItemIndicator
+                  _open={{
+                    src: "/images/negative.svg",
+                  }}
                   display={"flex"}
                   justifyContent={"center"}
                   alignItems={"center"}
-                  bg={"white"}
+                  bg={"#F3F3F3"}
+                  border={"1px solid #191A23"}
                   borderRadius={"50%"}
-                  w={"40px"}
-                  h={"40px"}
+                  w={"30px"}
+                  h={"30px"}
                 >
-                  <Accordion.ItemIndicator />
-                </Box>
+                  <Image
+                    src={"/images/positive.svg"}
+                    alt={`Logo ${index + 1}`}
+                    maxW={["14px"]}
+                    objectFit="contain"
+                  />
+                </Accordion.ItemIndicator>
               </Accordion.ItemTrigger>
-
               <Accordion.ItemContent>
-                <Accordion.ItemBody>{item.ans}</Accordion.ItemBody>
+                <Separator bg={"#000000"} mt={["20px"]} />
+                <Accordion.ItemBody
+                  textStyle={"p7"}
+                  mr={["10px"]}
+                  mt={["20px"]}
+                >
+                  {item.ans}
+                </Accordion.ItemBody>
               </Accordion.ItemContent>
             </Accordion.Item>
           ))}

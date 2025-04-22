@@ -30,7 +30,7 @@ const JoinUsSection = () => {
           >
             Let’s make things happen
           </Text>
-          <Text mt="20px" maxW={['480px']} color="black.100"  textStyle="p5">
+          <Text mt="20px" maxW={["480px"]} color="black.100" textStyle="p5">
             Contact us today to learn more about how our digital marketing
             services can help your business grow and succeed online.
           </Text>

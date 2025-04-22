@@ -8,6 +8,9 @@ import ServiceSection from "./components/serviceSection/ServiceSection";
 import JoinUsSection from "./components/joinUsSection/JoinUsSection";
 import CaseStudiesSection from "./components/caseStudiesSection/CaseStudiesSection";
 import OurWorkingSection from "./components/ourWorkingSection/OurWorkingSection";
+import TeamSection from "./components/TeamSection/TeamSection";
+import TestimonialSection from "./components/TestimonialSection/TestimonialSection";
+import ContactSection from "./components/contact/ContactSection";
 
 export default function Home() {
   return (
@@ -32,11 +35,14 @@ export default function Home() {
           <JoinUsSection />
         </Box>
         <Box mt={["20px", "35px", "50px"]}>
-          <CaseStudiesSection/>
+          <CaseStudiesSection />
         </Box>
         <Box mt={["20px", "35px", "50px"]}>
-          <OurWorkingSection/>
+          <OurWorkingSection />
         </Box>
+        <TeamSection />
+        <TestimonialSection />
+        <ContactSection />
       </ContainerLayout>
     </>
   );

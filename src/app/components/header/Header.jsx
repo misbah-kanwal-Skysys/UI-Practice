@@ -9,12 +9,13 @@ const Header = () => {
   return (
     <Box as="header" width="full">
       <Container
-        maxW={"1210px"}
+        maxW={["1000px", "1000px", "1210px"]}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"space-between"}
         mx={"auto"}
-        py={["40px"]}
+        py={["20px", "20px", "40px"]}
+        px={{ base: "10px", md: "20px" }}
       >
         <Logo />
         <Box

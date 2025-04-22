@@ -4,20 +4,21 @@ const ServiceCard = ({ index, item }) => {
     <Box
       border="1px solid #191A23"
       borderRadius="45px"
-      p={{ base: "15px", md: "18px", lg: "25px", xl: "50px" }}
       h="100%"
-      minW="100%"
       borderBottom="6px solid #191A23"
-      display="flex"
       bg={item?.bgColor}
       justifyContent="space-between"
       transition="all 0.3s"
       gap={["30px"]}
+      cursor={"pointer"}
+      p={{ md: "40px 35px 40px 35px", base: "30px 20px 30px 20px" }}
+      width={"100%"}
+      fontFamily={"Space Grotesk"}
     >
       <Box
         w={"100%"}
         //    maxW={["300px", "400px"]}
-        maxW={["100px", "300px", "450px"]}
+        // maxW={["100px", "300px", "450px"]}
         display={"flex"}
         flexDirection={"column"}
         justifyContent={"space-between"}
@@ -45,6 +46,16 @@ const ServiceCard = ({ index, item }) => {
           ))}
         </Box>
 
+        <Box
+          w={"100%"}
+          // maxW={["100px", "200px", "300px"]}
+          display="flex"
+          justifyContent="flex-end"
+          mt={["5px", "10px", "10px", "-10px"]}
+        >
+          <Image src={item.icon} alt="service illustration" />
+        </Box>
+
         <Flex gap={3} align="center">
           <Box w={{ base: "20px", md: "35px" }}>
             <Image w="100%" src={item.arrow} alt="arrow" />
@@ -62,21 +73,6 @@ const ServiceCard = ({ index, item }) => {
             Learn more
           </Link>
         </Flex>
-      </Box>
-
-      <Box
-        w={"100%"}
-        maxW={["100px", "200px", "300px"]}
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-      >
-        <Image
-          w="100%"
-          maxW="100%"
-          src={item.icon}
-          alt="service illustration"
-        />
       </Box>
     </Box>
   );

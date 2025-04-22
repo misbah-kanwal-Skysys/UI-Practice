@@ -3,7 +3,7 @@ import { defineTextStyles } from "@chakra-ui/react";
 export const textStyles = defineTextStyles({
   p1: {
     value: {
-      fontWeight: "400",
+      fontWeight: 400,
       fontSize: ["22px", "18px", "18px"],
       textTransform: "None",
     },
@@ -30,7 +30,7 @@ export const textStyles = defineTextStyles({
   p5: {
     value: {
       fontWeight: "400",
-      fontSize: ["14px", "15px", "17px"],
+      fontSize: ["13px", "13px", "16px", "17px"],
       textTransform: "None",
     },
   },
@@ -43,7 +43,14 @@ export const textStyles = defineTextStyles({
   p7: {
     value: {
       fontWeight: "400",
-      fontSize: ["14px", "15px", "16px"],
+      fontSize: ["12px", "12px", "16px"],
+    },
+  },
+  p8: {
+    value: {
+      fontWeight: "400",
+      fontSize: ["14px", "14px", "15px"],
+      fontWeight: 400,
     },
   },
 });
